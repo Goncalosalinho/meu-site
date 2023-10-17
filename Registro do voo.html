@@ -1,0 +1,137 @@
+<html>
+	<style>
+	
+	#_tabela {
+		text-align: center;
+		margin: 120px auto;
+		width: 1000px;
+		height: 600px;
+		border-color: green;
+    }
+
+	
+	#_titulo {
+		color: green;
+		font-family: Garamond;
+		font-size: 33px;
+	}
+	
+	#_button1 {
+		position: absolute;
+		text-align: left;
+		margin-left: -25%;
+		bottom: 25%;
+		height: 3.9%;
+		width: 8%;
+		text-align: center;
+		background-color: #FF2D37;
+		border-color: red;
+	}
+
+	#_button1:hover {
+		position: absolute;
+		text-align: left;
+		margin-left: -25%;
+		bottom: 25%;
+		height: 3.4%;
+		width: 7.7%;
+		text-align: center;
+	}
+	
+	#_button2 {
+		position: absolute;
+		text-align: left;
+		margin-left: 17%;
+		bottom: 25%;
+		height: 3.9%;
+		width: 8%;
+		text-align: center;
+		background-color: #FF2D37;
+		border-color: red;
+	}
+
+	#_button2:hover {
+		position: absolute;
+		text-align: left;
+		margin-left: 17%;
+		bottom: 25%;
+		height: 3.4%;
+		width: 7.7%;
+		text-align: center;
+	}
+	
+	#_button3 {
+		position: absolute;
+		text-align: left;
+		margin-left: -4.7%;
+		bottom: 25%;
+		height: 3.9%;
+		width: 8%;
+		text-align: center;
+		background-color: #FF2D37;
+		border-color: red;
+	}
+
+	#_button3:hover {
+		position:absolute;
+		text-align: left;
+		margin-left: -4.7%;
+		bottom: 25%;
+		height: 3.4%;
+		width: 7.7%;
+		text-align: center;
+  
+	}
+	
+	</style>
+	
+	<script>
+        function abrirJanelaPopup() {
+            // Configurar as dimensões da janela
+            var largura = 400;
+            var altura = 300;
+
+            // Calcular a posição do centro da janela
+            var esquerda = (screen.width - largura) / 2;
+            var topo = (screen.height - altura) / 2;
+			
+			var janelaPopup = window.open('pagina.html', 'NomeDaJanela', 'width=' + largura + ',height=' + altura + ',left=' + esquerda + ',top=' + topo);
+		}
+	</script>
+
+	<fieldset id="_tabela">
+		<legend id="_titulo"> Registro do Avião </legend>
+		
+		<input type="button" value="Criar Novo Registro" onclick="abrirJanelaPopup()" id="_button1"> </input>
+		<input type="button" value="Eliminar" id="_button2"> </input>
+		<a href="C:\Users\salin\Downloads\projeto 16.1\Registro do Aeroporto.html" type="_self"> <input type="button" value="Voltar" id="_button3"> </input></a>
+	
+	</fieldset>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

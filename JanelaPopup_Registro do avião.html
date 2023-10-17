@@ -1,0 +1,108 @@
+<html>
+	<head>
+		<title>Novo Registro</title>
+	</head>
+	
+	<style>
+	
+		#_button3 {
+		position: absolute;
+		text-align: left;
+		margin-left: -4.7%;
+		bottom: 25%;
+		height: 3.9%;
+		width: 8%;
+		text-align: center;
+		background-color: #FF2D37;
+		border-color: red;
+	}
+
+	#_button3:hover {
+		position:absolute;
+		text-align: left;
+		margin-left: -4.7%;
+		bottom: 25%;
+		height: 3.4%;
+		width: 7.7%;
+		text-align: center;
+  
+	
+	</style>
+	
+	<body>
+		<h2>Registro</h2>
+		<p>Este é o conteúdo da minha janela pop-up.</p>
+    
+
+    <script>
+        function fecharPopup() {
+            window.close();
+        }
+		
+		function fecharPopup(){
+		var inputText1 = document.getElementById("nome").value;
+		var inputText2 = document.getElementById("peso").value;
+		var inputText3 = document.getElementById("assentos").value;
+		var textoCombinado = "Nº Passageiros: " + inputText1 +  "\n" + "Max 50Kg: " + inputText2 + "\n" + "Assento Livre: " +inputText3;
+		document.getElementById("meuTextarea").value = textoCombinado;
+	
+	
+		}
+    </script>
+	<script type="text/vbscript">
+		Sub abrirArquivo()
+		Dim objShell
+		Set objShell = CreateObject ("WScript.Shell")
+		Set objShell.Run "notepad.exe mensagens.txt"
+		Set objShell = Nothing
+		End Sub
+		
+	
+	
+	</script>
+	
+	<script>
+        const input = document.getElementById('texto');
+        const contador = document.getElementById('contador');
+
+        input.addEventListener('input', function() {
+            const limite = 50;
+            const comprimento = input.value.length;
+            const restantes = limite - comprimento;
+            contador.textContent = restantes;
+			   });
+			   
+		  function limitarNumero(elemento) {
+            const  valor = elemento.value.trim(); // Remove espaços em branco do início e fim
+            const numero = parseInt(valor, 10); // Tenta converter o valor em um número inteiro
+            if (isNaN(numero) || numero > 50) {
+                elemento.value = ""; // Define o valor como "50" se for inválido ou maior que 50
+            }
+			}
+			
+			  function limitadorDeAssentos(elemento) {
+            const  valor = elemento.value.trim(); // Remove espaços em branco do início e fim
+            const numero = parseInt(valor, 10); // Tenta converter o valor em um número inteiro
+            if (isNaN(numero) || numero > 156) {
+                elemento.value = ""; // Define o valor como "50" se for inválido ou maior que 50
+            }
+			}
+    </script>
+	
+		<label for="nome">Nº Passageiros:</label>
+		<input type="text" id="nome" name="nome" placeholder="Número"><br>
+
+		<label for="texto">Limite de peso (malas):</label>
+		<input type="text"id="peso" oninput="limitarNumero(this)" name="peso" placeholder="MAX 50Kg" maxlength="2"><br>
+		<p><span id="contador">50</span> caracteres restantes.</p>1
+
+		<label for="assentos">Assentos livres/limite:</label>
+		<input type="text" id="assentos" name="assentos" oninput="limitadorDeAssentos(this)" placeholder="156 MAX"><br>
+	
+	
+		 <input type="button" value="Gravar" onclick="fecharPopup()"> </input>
+		 <br><br>
+		 <textarea rows="5" cols="49" id="meuTextarea" readonly ></textarea>
+		 <button onclick="abrirArquivo()" >Abrir Ficheiro	</button>
+	</body>
+</html>
